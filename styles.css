@@ -31,11 +31,12 @@ body {
 button {
   cursor: pointer;
   display: inline-block;
-  background: #333;
+  background: green;
   color: white;
   font-size: 18px;
   border: 0;
   padding: 1rem 1.5rem;
+  border-radius: 48px;
 }
 
 button:focus {

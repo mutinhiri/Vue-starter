@@ -1,3 +1,4 @@
+let x= 1
 const change = Vue.createApp({
   template: '<h1>Hello World </h1>'
 })
@@ -17,18 +18,13 @@ const app = Vue.createApp({
   },
   methods: {
     getUser() {
-      console.log('user logged in ')
+      change.mount('#app')
       // template: '<h1>Hello World</h1>'
     }
   }
+
 })
 
-let x= 1
 
-if (x < 2) {
-  app.mount('#app')
-}
-else {
-  change.mount('#app')
-}
+
 
