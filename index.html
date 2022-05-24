@@ -8,8 +8,12 @@
   <title>Vue starter app</title>
 </head>
 <body>
-  <h1>hello app</h1>
-  <div id="app"></div>
+
+  <div id="app">
+    <input type="text" placeholder="Enter Username Here" class="input-field">
+    <input type="password" placeholder="Enter password" class="input-field">
+    <button v-on:click="getUser()">Login</button>
+  </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="index.js"></script>
 </body>
