@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Task Tracker</h1>
+    <h1>Task Tracker {{title}}</h1>
   </header>
 </template>
 
@@ -8,6 +8,9 @@
   export default {
     // eslint-disable-next-line
     name: 'Header',
+    props: {
+      title: String
+    }
   }
 </script>
 

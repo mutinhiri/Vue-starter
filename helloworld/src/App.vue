@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>Hello World</h1>
-    <Header />
+    <h1>Hello world </h1>
+    <Header title="tasker"/>
   </div>
   
 </template>
