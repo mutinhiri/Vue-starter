@@ -13,7 +13,15 @@ import Header from './components/Header'
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+  },
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  created() {
+    this.tasks
   }
 }
 </script>
