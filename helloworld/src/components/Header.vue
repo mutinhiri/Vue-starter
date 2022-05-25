@@ -6,13 +6,16 @@
 
 <script>
   export default {
+    // eslint-disable-next-line
     name: 'Header',
-
   }
 </script>
 
 <style scoped>
-heeader {
+header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 </style>

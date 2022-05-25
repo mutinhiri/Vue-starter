@@ -1,17 +1,19 @@
 <template>
-<div class="container">
-  <h1>Hello World</h1>
-</div>
+  <div class="container">
+    <h1>Hello World</h1>
+    <Header />
+  </div>
   
 </template>
 
 <script>
+import Header from './components/Header'
 
 
 export default {
   name: 'App',
   components: {
-
+    Header
   }
 }
 </script>
