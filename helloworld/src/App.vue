@@ -29,6 +29,9 @@ export default {
       if(confirm('Are you sure to delete')) {
           this.tasks = this.tasks.filter((task) => task.id !== id)
       }
+    }, 
+    toggleReminder(id) {
+      this.tasks = this.tasks.map((task) => task == task.id ? {...task, reminder: !task.reminder} : task )
     }
   },
   created() {
