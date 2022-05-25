@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Hello world </h1>
     <Header title="tasker"/>
-    <Tasks @delete-task='deleteTask' :tasks="tasks"/>
+    <Tasks @toggle-reminder="toggleReminder" @delete-task='deleteTask' :tasks="tasks"/>
   </div>
   
 </template>
@@ -26,7 +26,9 @@ export default {
   },
   methods: {
     deleteTask(id){
-      console.log('task', id)
+      if(confirm('Are you sure to delete')) {
+          this.tasks = this.tasks.filter((task) => task.id !== id)
+      }
     }
   },
   created() {
