@@ -2,18 +2,21 @@
   <div class="container">
     <h1>Hello world </h1>
     <Header title="tasker"/>
+    <Tasks :tasks="tasks"/>
   </div>
   
 </template>
 
 <script>
 import Header from './components/Header'
+import Tasks from './components/Tasks'
 
 
 export default {
   name: 'App',
   components: {
     Header,
+    Tasks
   },
   data() {
     return {
@@ -21,7 +24,28 @@ export default {
     }
   },
   created() {
-    this.tasks
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Doctors Appointment',
+        day: 'March 1 2022',
+        reminder: true
+      }, 
+
+      {
+        id: 2,
+        text: 'Meeting at work',
+        day: 'June 1 2022',
+        reminder: true 
+      },
+
+      {
+        id: 3,
+        text: 'Go to Shopping',
+        day: 'July 4 2022',
+        reminder: false
+      }
+    ]
   }
 }
 </script>
