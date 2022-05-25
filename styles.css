@@ -28,6 +28,14 @@ body {
   height: 30px;
 }
 
+.display-text {
+  color: red;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 500px;
+}
+
 button {
   cursor: pointer;
   display: inline-block;
