@@ -14,7 +14,8 @@
       tasks: Array
     },
     components: {
-      Task
-    }
+      Task,
+    },
+    emits: []
   }
 </script>
