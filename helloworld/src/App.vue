@@ -4,11 +4,13 @@
     <Header title="tasker"/>
     <Tasks @toggle-reminder="toggleReminder" @delete-task='deleteTask' :tasks="tasks"/>
   </div>
-  
+  <router-view></router-view>
+  <Footer />
 </template>
 
 <script>
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Tasks from './components/Tasks'
 
 
@@ -16,7 +18,8 @@ export default {
   name: 'App',
   components: {
     Header,
-    Tasks
+    Tasks,
+    Footer
   },
 
   data() {
