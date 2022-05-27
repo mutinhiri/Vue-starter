@@ -1,10 +1,11 @@
 <template>
   <footer>
-    <p>Copyright &copy; 2022 </p>
+    <p>Copyright &copy; 2022</p>
+    <router-link to="/about">AboutComp</router-link>
   </footer>
 </template>
 
-<style>
+<style scoped>
   a {
     color: #333
   }
