@@ -1,5 +1,4 @@
 <template>
-  <h1>Hello world </h1>
     <form>
         <div class="container">
           <h1>Sign Up</h1>
@@ -13,17 +12,6 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
       
-                  <label for="email"><b>Phone Number</b></label>
-            <br>
-           <select name="phoneCode" required>
-            <option selected hidden value="">Code</option>
-            <option value="66">+98</option>
-            <option value="66">+99</option>
-            <option value="66">+90</option>
-            <option value="66">+66</option>
-           </select>
-           <input type="phone" name="phone" placeholder="812345678" required>
-      
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       
           <div class="clearfix">
@@ -32,7 +20,7 @@
           </div>
         </div>
       </form>
-  <router-link to="/"><button>Go back</button> </router-link>
+  <router-link to="/"><button>Log in </button> </router-link>
 </template>
 
 <style scoped>
