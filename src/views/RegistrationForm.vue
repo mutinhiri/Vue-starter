@@ -10,7 +10,7 @@
           <input type="email" placeholder="Enter Email" name="email" v-model="email" required>
           
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="psw" v-model="password" required>
       
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       
@@ -22,6 +22,12 @@
       </form>
   <router-link to="/"><button>Log in </button> </router-link>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
