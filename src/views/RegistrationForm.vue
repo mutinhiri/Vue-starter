@@ -25,7 +25,13 @@
 
 <script>
 export default {
-  
+  name: 'RegistrationForm',
+  data(){
+    return {
+      email: '',
+      password: '',
+    }
+  }
 }
 </script>
 
