@@ -5,7 +5,7 @@
           <p>Please fill in this form to create an account.</p>
       
               <label for="email"><b>Username</b></label>
-            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="text" name="username" placeholder="Enter Username" v-model="username" required>
           <label for="email"><b>Email</b></label>
           <input type="email" placeholder="Enter Email" name="email" v-model="email" required>
           
@@ -24,12 +24,28 @@
 </template>
 
 <script>
+import { Auth } from 'aws-amplify'
+
 export default {
   name: 'RegistrationForm',
   data(){
     return {
+      username: '',
       email: '',
       password: '',
+    }
+  },
+  async register(){
+    try {
+      await Auth.signUp({
+
+        username: this.username,
+        email: this.email,
+        password: this.password,
+      });
+      alert('User successfully registered. Please login')
+    } catch (error) {
+      alert(error.message)
     }
   }
 }
