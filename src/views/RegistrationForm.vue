@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import Auth from '@aws-amplify/auth';
 export default {
   name: 'RegistrationForm',
   data() {
@@ -32,6 +33,18 @@ export default {
       username: '',
       email: '',
       password: ''
+    };
+  },
+
+  async register() {
+    try {
+      await Auth.signUp({
+        username: this.username,
+        password: this.password,
+      });
+      alert('User successfully registered. Please login');
+    } catch (error) {
+      alert(error.message)
     }
   }
 }
