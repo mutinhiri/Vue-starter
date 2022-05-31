@@ -49,9 +49,9 @@ export default {
       } catch (error) {
         alert(error.message)
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
