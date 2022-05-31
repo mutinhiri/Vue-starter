@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form @submit="register">
         <div class="container">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
@@ -29,6 +29,7 @@ import Auth from '@aws-amplify/auth';
 
 export default {
   name: 'RegistrationForm',
+
   data() {
     return {
       username: '',
@@ -36,17 +37,18 @@ export default {
       password: ''
     };
   },
-
-  async register() {
-    try {
-      await Auth.signUp({
-        username: this.username,
-        email: this.email,
-        password: this.password,
-      });
-      alert('User successfully registered. Please login');
-    } catch (error) {
-      alert(error.message)
+  methods: {
+    async register() {
+      try {
+        await Auth.signUp({
+          username: this.username,
+          email: this.email,
+          password: this.password,
+        });
+        alert('User successfully registered. Please login');
+      } catch (error) {
+        alert(error.message)
+      }
     }
   }
 }
