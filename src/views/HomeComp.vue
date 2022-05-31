@@ -44,6 +44,7 @@
                 </div>
             </div>
             <div>
+            <router-link to="/registration"><button>sign up new user</button> </router-link><br>
               <router-link to="/about"><button class="logger">Login</button> </router-link>
             </div>
         </form>
