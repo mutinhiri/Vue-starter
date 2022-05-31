@@ -18,11 +18,24 @@
           <div class="clearfix">
             <button type="submit" class="btn">Sign Up</button>
           </div>
-          
+
         </div>
       </form>
   <router-link to="/"><button>Log in </button> </router-link>
 </template>
+
+<script>
+export default {
+  name: 'RegistrationForm',
+  data() {
+    return {
+      username: '',
+      email: '',
+      password: ''
+    }
+  }
+}
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
